@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
     <!--     initially (id = "movie") -> name =" , "-->
-    <bean name = "movie1, movie2" class="com.stackroute.domain.Movie" scope="prototype">
-        <constructor-arg name="actor" ref="actor" />
+    <bean name = "movie1, movie2" class="com.stackroute.domain.Movie" scope="prototype" autowire="byName">
+        <!--        <constructor-arg name="actor" ref="actor" />-->
     </bean>
 
     <bean id="actor" class="com.stackroute.domain.Actor">
